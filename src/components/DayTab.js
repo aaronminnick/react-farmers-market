@@ -1,13 +1,18 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 function DayTab(props) {
   if (props.day === props.selectedDay) {
     return (
-      <button>{props.day}</button>
+      <Button className="btn btn-selected btn-day">
+        {props.day}
+      </Button>
     )
   } else {
     return (
-      <button onClick={updateDay}>{props.day}</button>
+      <Button className="btn btn-day" onClick={updateDay}>
+        {props.day}
+      </Button>
     )
   }
   

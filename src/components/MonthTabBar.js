@@ -1,7 +1,7 @@
 import React from "react";
 import MonthTab from "./MonthTab";
 
-const months = ["Jan", "Feb", "March", "April", "May", "June", "July", "August", "Sept", "Oct", "Nov", "Dec"];
+const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
 function MonthTabBar(props) {
   return (

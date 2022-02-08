@@ -32,6 +32,12 @@ const marketSchedule = [
     hours: "2:00pm - 6:00pm",
     booth: "6D"
   },
+  {
+    day: "Friday",
+    location: "Northwest Portland",
+    hours: "2:00pm - 6:00pm",
+    booth: "6D"
+  },
   {  
     day: "Saturday",
     location: "Beaverton",
@@ -42,11 +48,11 @@ const marketSchedule = [
 
 const availableProduce = [  
   {  
-    month: "Jan",
+    month: "January",
     selection: ["Apples", "Hazelnuts", "Pears", "Garlic", "Mushrooms", "Onions", "Potatoes", "Turnips"]
   },
   {  
-    month: "Feb",
+    month: "February",
     selection: ["Apples", "Hazelnuts", "Pears", "Garlic", "Mushrooms", "Onions", "Potatoes"]
   },
   {  
@@ -74,19 +80,19 @@ const availableProduce = [
     selection: ["Apples", "Apricots", "Blackberries", "Blueberries", "Cherries", "Melons", "Nectarines", "Peaches", "Pears", "Plums", "Raspberries", "Rhubarb", "Strawberries", "Tomatoes", "Beets", "Broccoli", "Brussel Sprouts", "Cabbage", "Carrots", "Cauliflower", "Corn", "Cucumber", "Eggplant", "Garlic", "Green Beans", "Kohlrabi", "Lettuce", "Mushrooms", "Onions", "Peas", "Peppers", "Potatoes", "Radishes", "Squash", "Turnips"]
   },
   {  
-    month: "Sept",
+    month: "September",
     selection: ["Apples", "Blueberries", "Grapes", "Melons", "Peaches", "Pears", "Plums", "Raspberries", "Tomatoes", "Broccoli", "Brussel Sprouts", "Cabbage", "Carrots", "Cauliflower", "Corn", "Cucumber", "Eggplant", "Garlic", "Green Beans", "Kohlrabi", "Lettuce", "Mushrooms", "Onions", "Peas", "Peppers", "Potatoes", "Radishes", "Squash", "Turnips"]
   },
   {  
-    month: "Oct",
+    month: "October",
     selection: ["Apples", "Grapes", "Hazelnuts", "Melons", "Peaches", "Pears", "Tomatoes", "Broccoli", "Brussel Sprouts", "Cabbage", "Carrots", "Cauliflower", "Corn", "Cucumber", "Eggplant", "Garlic", "Green Beans", "Kohlrabi", "Lettuce", "Mushrooms", "Onions", "Peas", "Peppers", "Potatoes", "Pumpkins", "Radishes", "Squash", "Turnips"]
   },
   {  
-    month: "Nov",
+    month: "November",
     selection: ["Apples", "Hazelnuts", "Pears", "Broccoli", "Carrots", "Cauliflower", "Garlic", "Mushrooms", "Onions", "Potatoes", "Squash", "Turnips"]
   },
   {  
-    month: "Dec",
+    month: "December",
     selection: ["Apples", "Hazelnuts", "Pears", "Broccoli", "Carrots", "Cauliflower", "Garlic", "Mushrooms", "Onions", "Potatoes", "Turnips"]
   }
 ];
@@ -96,11 +102,13 @@ function DisplayPane(props) {
   let monthProduce = availableProduce.filter(m => m.month === props.selectedMonth)[0].selection;
   return (
     <React.Fragment>
-      <h2>{scheduleDay.day}</h2>
-      <h3>{scheduleDay.location} - {scheduleDay.booth}</h3>
-      <h3>({scheduleDay.hours})</h3>
-      <hr/>
-      <ProduceList produceArray={monthProduce} />
+      <div className="display-pane">
+        <h2>{scheduleDay.day}</h2>
+        <h3>{scheduleDay.location} - Booth {scheduleDay.booth}</h3>
+        <h3>({scheduleDay.hours})</h3>
+        <hr/>
+        <ProduceList produceArray={monthProduce} />
+      </div>
     </React.Fragment>
   )
 }

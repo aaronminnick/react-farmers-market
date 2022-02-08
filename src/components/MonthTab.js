@@ -1,13 +1,18 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
 
 function MonthTab(props) {
   if (props.month === props.selectedMonth) {
     return (
-      <button>{props.month}</button>
+      <Button className="btn btn-selected btn-month">
+        {props.month}
+      </Button>
     )
   } else {
     return (
-      <button onClick={updateMonth}>{props.month}</button>
+      <Button className="btn btn-month" onClick={updateMonth}>
+        {props.month}
+      </Button>
     )
   }
 
