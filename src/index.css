@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(59, 65, 19);
+  background-color: rgba(90, 37, 67, 0.685));
+  font-family: Lato;
 }
 
 .broccoli-background {
@@ -20,17 +21,13 @@ body {
   min-height: calc(100vh - 50px);
 }
 
-.day-bar {
-  width: 100%;
-}
-
 .btn {
   background-color: rgba(239, 146, 62, 0.979);
   border: 1px solid rgb(50,59,44);
 }
 
 .btn-selected, .btn:focus, .btn:hover {
-  background-color: rgb(191, 54, 7);
+  background-color: rgb(77, 0, 43);
 }
 
 .btn-day {
@@ -38,13 +35,29 @@ body {
   display: inline;
   font-size: small;
   padding: 10px 2px;
-  border-radius: 10px 10px 0px 0px;
+  border-radius: 15px 15px 0px 0px;
 }
 
 .btn-month {
   width: 100%;
-  border-radius: 10px 0px 0px 10px;
+  border-radius: 15px 0px 0px 15px;
   padding: 10px;
+}
+
+.logo {
+  width: 100%;
+}
+
+.location {
+  text-align: center;
+}
+
+.center-vertical {
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .display-pane {

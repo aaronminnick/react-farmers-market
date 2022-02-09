@@ -1,6 +1,7 @@
 import React from 'react';
 import ProduceList from './ProduceList';
-
+import {Row, Col} from 'react-bootstrap';
+import Logo from '../img/logo.png';
 const marketSchedule = [  
   {  
     day: "Sunday",
@@ -102,13 +103,21 @@ function DisplayPane(props) {
   let monthProduce = availableProduce.filter(m => m.month === props.selectedMonth)[0].selection;
   return (
     <React.Fragment>
-      <div className="display-pane">
-        <h2>{scheduleDay.day}</h2>
-        <h3>{scheduleDay.location} - Booth {scheduleDay.booth}</h3>
-        <h3>({scheduleDay.hours})</h3>
+      <Row className="display-pane">
+        <Col className="col-1"></Col>
+        <Col className="col-4">
+          <img className="logo" src={Logo} alt="" />
+        </Col>
+        <Col className="col-7 location">
+          <div className="center-vertical">
+            <h2>{scheduleDay.day}</h2>
+            <h3>{scheduleDay.location} - Booth {scheduleDay.booth}</h3>
+            <h3>({scheduleDay.hours})</h3>
+          </div>
+        </Col>
         <hr/>
         <ProduceList produceArray={monthProduce} />
-      </div>
+      </Row>
     </React.Fragment>
   )
 }

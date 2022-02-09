@@ -94,7 +94,7 @@ class StateControl extends React.Component {
         <Container>
           <Row>
             <Col className="col-2 no-right-margin"></Col>
-            <Col className="col-10 no-left-margin">
+            <Col className="col-10 no-left-margin no-right-margin">
               <DayTabBar selectedDay={this.state.day} 
                 updateDay={this.updateDay} />
             </Col>
