@@ -2,6 +2,7 @@ import React from 'react';
 import ProduceList from './ProduceList';
 import {Row, Col} from 'react-bootstrap';
 import Logo from '../img/logo.png';
+
 const marketSchedule = [  
   {  
     day: "Sunday",
